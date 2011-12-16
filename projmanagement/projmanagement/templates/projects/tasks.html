@@ -1,0 +1,32 @@
+
+
+    <table border=1>
+    <caption>Tareas del proyecto {{ project.codeName }} - {{ project.name }}</caption>
+    <thead>
+    <tr>
+      <th rowspan="2">Tarea</th><th rowspan="2">Tipo</th><th rowspan="2">Valoración</th><th colspan="2">Fecha Inicio</th>
+      <th colspan="2">Fecha Fin</th><th rowspan="2">Estado</th><th rowspan="2">Comentarios</th>      
+    </tr>
+    <tr>
+    <th>Prevista</th><th>Real</th><th>Prevista</th><th>Real</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for phase in project.phase_set.all %}
+    <tr><td colspawn="9"><b>{{ phase.name }}</b></td></tr>
+      {% for task in phase.task_set.all %}
+    	<tr>
+        <td>{{ task.name }}</td>
+        <td>{{ task.get_taskType_display|default:" " }}</td>
+        <td>{{ task.estimateCost|default:" " }}</td>
+        <td>{{ task.estimateInitDate|default:" " }}</td>
+        <td>{{ task.realInitDate|default:" " }}</td>
+        <td>{{ task.estimateEndDate|default:" " }}</td>
+        <td>{{ task.realEndDate|default:" " }}</td>
+        <td>{{ task.get_status_display|default:" " }}</td>
+        <td>{{ task.comments|default:" " }}</td>
+        </tr>
+      {% endfor %}
+    {% endfor %}
+    </tbody>
+    </table>    

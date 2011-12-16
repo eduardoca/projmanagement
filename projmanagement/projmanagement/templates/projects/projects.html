@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block js %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery-ui.js"></script>
+<!--     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.confirm_dialog.js"></script> -->
+<!--     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.message_box.js"></script> -->
+<!--     <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.blockUI.js"></script> -->
+    <script type="text/javascript" src="{% url javascript 'projects' 'projects' %}"></script>
+
+{% endblock %}
+
+{% block content %}
+
+{% if project_list %}
+    <ul>
+    {% for project in project_list %}
+        <li><a href="/projects/{{ project.id }}/">{{ project.codeName }} - {{ project.name}} </a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No projects are available.</p>
+{% endif %}
+
+<form id="project_form">{% csrf_token %}
+{% include 'projects/project_form.html' %}
+</form>
+
+{% endblock %}

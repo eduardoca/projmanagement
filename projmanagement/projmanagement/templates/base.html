@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es_ES" lang="es_ES">
+<head>
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.js"></script>
+{% block js %}{% endblock %}{# Override for view-specific js libraries to be loaded #}
+<script type="text/javascript">
+//<![CDATA[
+{# Override this block to add functions to bind on document ready. #}
+$(document).ready(function() {
+    {% block docreadyjs %}{% endblock %}
+});
+{# Override this block to add inline js #}
+{% block inlinejs %}{% endblock %}
+//]]>
+</script>
+</head>
+<body>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

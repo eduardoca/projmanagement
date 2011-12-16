@@ -1,0 +1,159 @@
+[
+  {
+    "pk": 1, 
+    "model": "projects.project", 
+    "fields": {
+      "status": "N", 
+      "name": "AVA TF7", 
+      "initDate": null, 
+      "comments": "", 
+      "dateToFinish": null, 
+      "codeName": "GIM238"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "projects.phase", 
+    "fields": {
+      "status": "N", 
+      "name": "Consulta morosidad visi\u00f3n cliente", 
+      "phaseNumber": 1, 
+      "initDate": null, 
+      "isUnique": false, 
+      "comments": "", 
+      "project": 1
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "projects.task", 
+    "fields": {
+      "status": "N", 
+      "predecessor": [], 
+      "realInitDate": null, 
+      "realCost": null, 
+      "realEndDate": null, 
+      "name": "Planning", 
+      "level": 1, 
+      "estimateInitDate": null, 
+      "comments": "", 
+      "estimateCost": null, 
+      "EstimateEndDate": null, 
+      "superTask": null, 
+      "phase": 1, 
+      "taskType": "PL", 
+      "order": 1, 
+      "successor": []
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "projects.task", 
+    "fields": {
+      "status": "N", 
+      "predecessor": [], 
+      "realInitDate": null, 
+      "realCost": null, 
+      "realEndDate": null, 
+      "name": "Gesti\u00f3n del proyecto", 
+      "level": 1, 
+      "estimateInitDate": null, 
+      "comments": "", 
+      "estimateCost": null, 
+      "EstimateEndDate": null, 
+      "superTask": null, 
+      "phase": 1, 
+      "taskType": "MG", 
+      "order": 2, 
+      "successor": []
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "projects.task", 
+    "fields": {
+      "status": "N", 
+      "predecessor": [], 
+      "realInitDate": null, 
+      "realCost": null, 
+      "realEndDate": null, 
+      "name": "Propuesta de soluci\u00f3n", 
+      "level": 1, 
+      "estimateInitDate": null, 
+      "comments": "", 
+      "estimateCost": null, 
+      "EstimateEndDate": null, 
+      "superTask": null, 
+      "phase": 1, 
+      "taskType": "PS", 
+      "order": null, 
+      "successor": []
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "projects.task", 
+    "fields": {
+      "status": "N", 
+      "predecessor": [], 
+      "realInitDate": null, 
+      "realCost": null, 
+      "realEndDate": null, 
+      "name": "An\u00e1lisis Funcional", 
+      "level": 1, 
+      "estimateInitDate": null, 
+      "comments": "", 
+      "estimateCost": null, 
+      "EstimateEndDate": null, 
+      "superTask": null, 
+      "phase": 1, 
+      "taskType": "A", 
+      "order": null, 
+      "successor": []
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "projects.task", 
+    "fields": {
+      "status": "N", 
+      "predecessor": [], 
+      "realInitDate": null, 
+      "realCost": null, 
+      "realEndDate": null, 
+      "name": "DT modificaciones BD", 
+      "level": 1, 
+      "estimateInitDate": null, 
+      "comments": "", 
+      "estimateCost": null, 
+      "EstimateEndDate": null, 
+      "superTask": null, 
+      "phase": 1, 
+      "taskType": "TD", 
+      "order": null, 
+      "successor": []
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "projects.task", 
+    "fields": {
+      "status": "N", 
+      "predecessor": [], 
+      "realInitDate": null, 
+      "realCost": null, 
+      "realEndDate": null, 
+      "name": "Prototipo", 
+      "level": 1, 
+      "estimateInitDate": null, 
+      "comments": "", 
+      "estimateCost": null, 
+      "EstimateEndDate": null, 
+      "superTask": null, 
+      "phase": 1, 
+      "taskType": "A", 
+      "order": null, 
+      "successor": []
+    }
+  }
+]
